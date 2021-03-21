@@ -9,7 +9,7 @@ const download = require('download');
 
 // 公共变量
 const KEY = process.env.JD_COOKIE;
-const serverJ = process.env.PUSH_KEY;
+const serverJ = 'a';
 const DualKey = process.env.JD_COOKIE_2;
 
 
@@ -35,11 +35,13 @@ async function sendNotify (text,desp) {
     json: true,
     method: 'POST'
   }
-  await rp.post(options).then(res=>{
-    console.log(res)
-  }).catch((err)=>{
-    console.log(err)
-  })
+  console.log(text);
+  console.log(desp);
+//  await rp.post(options).then(res=>{
+//    console.log(res)
+//  }).catch((err)=>{
+//    console.log(err)
+//  })
 }
 
 async function start() {
